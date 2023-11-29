@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheet_background"
+    android:elevation="10dp"
+    android:id="@+id/otpLayout"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    android:clickable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tvVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP VERIFICATION"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/neomorph_background_color"
+        app:layout_constraintTop_toBottomOf="@id/tvVerify"
+        android:layout_marginTop="10dp"/>
+
+    <com.chaos.view.PinView
+        android:id="@+id/etPinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:focusable="false"
+        android:editable="false"
+        android:padding="@dimen/common_padding"
+        android:state_selected="false"
+        android:textColor="@color/primary_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorColor="@color/colorPrimary"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:itemHeight="48dp"
+        app:itemRadius="4dp"
+        app:itemSpacing="10dp"
+        app:itemWidth="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        app:lineColor="@color/colorPrimary"
+        app:lineWidth="2dp"
+        app:viewType="rectangle" />
+
+    <ProgressBar
+        android:id="@+id/otpProgressBar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etPinView"
+        app:layout_constraintStart_toEndOf="@+id/etPinView"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        android:visibility="gone"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPinView"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/ll2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/black" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ll1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ll1"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@android:color/black" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+
+            android:id="@+id/ll3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ll1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ll2"
+            app:layout_constraintTop_toTopOf="@+id/ll1"
+            app:layout_constraintVertical_bias="1.0"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@android:color/black" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/ll4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/ll1"
+            app:layout_constraintTop_toBottomOf="@id/ll1"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@android:color/black" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+
+            android:id="@+id/ll5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ll4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ll4"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@android:color/black" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+
+            android:id="@+id/ll6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ll4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ll5"
+            app:layout_constraintTop_toTopOf="@+id/ll4"
+            app:layout_constraintVertical_bias="1.0"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@android:color/black" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:id="@+id/ll7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/ll4"
+            app:layout_constraintTop_toBottomOf="@id/ll4"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn7"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@android:color/black" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+
+            android:id="@+id/ll8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ll7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ll7"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn8"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="@android:color/black" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+
+            android:id="@+id/ll9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ll7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ll8"
+            app:layout_constraintTop_toTopOf="@+id/ll4"
+            app:layout_constraintVertical_bias="1.0"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn9"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="@android:color/black" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+
+            android:id="@+id/ll0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ll8"
+            app:layout_constraintStart_toStartOf="@+id/ll8"
+            app:layout_constraintTop_toBottomOf="@+id/ll8"
+            app:neomorph_background_color="@color/neomorph_background_color"
+            app:neomorph_elevation="8dp"
+            app:neomorph_highlight_color="@color/neomorph_highlight_color"
+            app:neomorph_shadow_color="@color/neomorph_shadow_color"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_view_type="circular">
+
+            <TextView
+                android:id="@+id/btn0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ll0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ll0"
+            app:layout_constraintTop_toBottomOf="@+id/ll8"
+            app:srcCompat="@drawable/ic_backspace"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

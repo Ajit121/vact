@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_radius">50dp</dimen>
+    <dimen name="common_padding">10dp</dimen>
+    <dimen name="max_layout_width">600dp</dimen>
+    <dimen name="form_field_margin">16dp</dimen>
+</resources>

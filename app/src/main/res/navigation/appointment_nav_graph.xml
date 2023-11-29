@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appoinment_nav_graph"
+    app:startDestination="@id/appointmentsFragment2">
+
+    <fragment
+        android:id="@+id/appointmentsFragment2"
+        android:name="com.score.vact.ui.appointment_list.AppointmentsFragment"
+        android:label="Appointments"
+        tools:layout="@layout/appointments_fragment">
+        <action
+            android:id="@+id/action_appointmentsFragment2_to_appointmentDetailsFragment2"
+            app:destination="@id/appointmentDetailsFragment2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim">
+
+        </action>
+        <action
+            android:id="@+id/action_appointmentsFragment2_to_appointmentModifyFragment"
+            app:destination="@id/appointmentModifyFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentDetailsFragment2"
+        android:name="com.score.vact.ui.appointment_details.AppointmentDetailsFragment"
+        android:label="Appointment Details"
+        tools:layout="@layout/appointment_details_fragment">
+        <argument
+            android:name="id"
+            app:argType="integer"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentModifyFragment"
+        android:name="com.score.vact.ui.appointment_modify.AppointmentModifyFragment"
+        android:label="Update Appointment" />
+
+</navigation>
